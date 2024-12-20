@@ -1,0 +1,55 @@
+/* src/Components/ViewMarks.css */
+
+.container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for better readability */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.title {
+  margin-bottom: 20px;
+  color: black; /* Darker orange for better contrast */
+  font-weight: bold; /* Bold title */
+  text-align: center; /* Center-align the title */
+}
+
+.button {
+  margin-bottom: 20px;
+  color: black; /* Text color */
+  border-color: black; /* Border color */
+  background-color: transparent; /* No background color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+  color: #ff8c00; /* Change text color on hover */
+}
+
+.space {
+  margin: 10px 0; /* Space between elements */
+}
+
+.dialog-title {
+  font-weight: bold; /* Bold dialog title */
+}
+
+.dialog-content {
+  margin-bottom: 10px; /* Spacing below dialog content */
+}
+
+/* Style for DataGrid headers */
+.dx-datagrid-header-row {
+  background-color: #ff8c00; /* Header background */
+  color: white; /* Header text color */
+}
+
+/* Style for DataGrid rows */
+.dx-datagrid-row {
+  transition: background-color 0.3s; /* Smooth transition for row hover */
+}
+
+.dx-datagrid-row:hover {
+  background-color: rgba(255, 140, 0, 0.1); /* Light hover effect for rows */
+}

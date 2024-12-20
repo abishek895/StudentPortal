@@ -1,0 +1,54 @@
+/* home.css */
+
+.login-button {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Space above the button */
+}
+
+.login-button button {
+  padding: 12px 24px; /* Padding for the button */
+  font-size: 16px; /* Font size for the button text */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  background: linear-gradient(90deg, #4a90e2, #9013fe); /* Gradient background */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition */
+  text-align: center; /* Center the text inside the button */
+  width: auto; /* Set width to auto for the button */
+}
+
+/* Button hover effect */
+.login-button button:hover {
+  background: linear-gradient(90deg, #9013fe, #4a90e2); /* Reverse gradient on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-button button {
+    width: 100%; /* Full width on smaller screens */
+    font-size: 18px; /* Increase font size for better readability */
+  }
+}
+/* home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+.hero-section {
+  text-align: center; /* Center the text */
+}
+
+.hero-title {
+  margin-bottom: 10px; /* Space between title and subtitle */
+}
+
+.hero-subtitle {
+  font-weight: 300; /* Optional: make the subtitle lighter */
+}

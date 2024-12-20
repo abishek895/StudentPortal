@@ -1,0 +1,165 @@
+/* Change the color of pagination numbers to white and add text shadow */
+.dx-pagination .dx-pager-info,
+.dx-pagination .dx-page {
+    color: white !important; /* Ensure the color is applied */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for better visibility */
+}
+
+/* Optional: Style for pagination background */
+.dx-pagination {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    border-radius: 5px; /* Rounded corners for pagination */
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    gap: 16px; /* Gap between buttons */
+    margin-bottom: 20px; /* Optional margin */
+}
+
+.search-export-container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Gap between search and export buttons */
+}
+
+.export-container {
+    display: flex;
+    gap: 16px; /* Gap between export buttons */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px; /* Full width when expanded */
+    background: linear-gradient(135deg, rgba(63, 135, 166, 0.8), rgba(0, 0, 0, 0.7)); /* Black gradient included */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease; /* Smooth transition for width */
+    overflow: hidden; /* Hide overflow to prevent clipping */
+}
+
+.sidebar.collapsed {
+    width: 60px; /* Width when collapsed to fit icons */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 50px 0 0 0;
+    display: flex; /* Flex display for horizontal alignment */
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    padding: 10px 0; /* Reduced padding for icon buttons */
+}
+
+.sidebar ul li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Increased font size for icons */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and icon to the start */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 100%; /* Full width to cover clickable area */
+}
+
+.sidebar ul li button i {
+    font-size: 20px;
+    margin-right: 12px; /* Add space between icon and text */
+}
+
+.sidebar ul li button span {
+    margin-top: -4px; /* Adjust this value to move the label higher */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.sidebar ul li button:hover {
+    color: #ffeb3b;
+}
+
+/* Logout Button styles */
+.logout-button {
+    padding: 10px 0; /* Use consistent padding */
+    margin-top: auto; /* Push logout button to the bottom */
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Increased font size for logout icon */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and icon to the start */
+    width: 100%; /* Ensure full width for consistency */
+}
+
+.logout-btn i {
+    font-size: 20px; /* Keep consistent font size for icons */
+    margin-right: 12px; /* Add space between icon and text */
+}
+
+.logout-btn span {
+    margin-top: -4px; /* Adjust this value to move the label higher */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.logout-btn:hover {
+    color: #ffeb3b;
+}
+
+/* Toggle Button Styles */
+.navbar-toggle-button {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Position the button */
+    z-index: 1001; /* Make sure it appears above other elements */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    .sidebar.collapsed {
+        width: 60px; /* Adjust width for collapsed state */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 150px; /* Further adjust width for very small screens */
+    }
+
+    .sidebar.collapsed {
+        width: 60px; /* Keep the collapsed width consistent */
+    }
+
+    .sidebar ul li {
+        padding: 10px 15px; /* Reduce padding for small screens */
+    }
+
+    .sidebar ul li button {
+        font-size: 16px; /* Adjust font size for smaller buttons */
+    }
+}
+
+.add-button {
+    justify-content: center;
+}
+
+    

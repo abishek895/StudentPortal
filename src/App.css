@@ -1,0 +1,148 @@
+/* Basic reset */
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+  background: white;
+  color: black;
+  font-family: 'Arial', sans-serif;
+  overflow: auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for large screens */
+  min-height: 100vh; /* Full screen height */
+}
+
+/* Main content styles */
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align content to the left */
+  min-height: calc(100vh - 120px);
+  overflow: auto;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100vh;
+  width: 250px; /* Default expanded sidebar width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+/* Sidebar collapsed styles */
+.sidebar.collapsed {
+  width: 60px; /* Reduced width when collapsed */
+}
+
+/* Sidebar links */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #575757; /* Hover effect */
+}
+
+/* Sidebar links (for collapsed state, only icons) */
+.sidebar.collapsed .nav-text {
+  display: none; /* Hide text when collapsed */
+}
+
+.sidebar.collapsed .nav-item {
+  padding: 10px; /* Reduced padding when collapsed */
+}
+
+/* .main-content full-width and shift-left behavior when sidebar collapses */
+.main-content {
+  margin-left: 110px; /* Default when sidebar is expanded */
+  width: calc(100% - 250px); /* Adjust width when sidebar is expanded */
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* When the sidebar is collapsed, shift content further left */
+.main-content.shift-left {
+  margin-left: 60px; /* Reduced margin when sidebar is collapsed */
+  width: calc(100% - 60px); /* Adjust content width */
+}
+
+/* .main-content full-width (default) when sidebar is expanded */
+.main-content.full-width {
+  margin-left: 250px; /* Reset the margin to expanded sidebar width */
+  width: calc(100% - 250px); /* Reset width */
+}
+
+
+/* Prevent content from overlaying the collapsed sidebar */
+.main-content.no-overlay {
+  margin-left: 60px; /* Leave space for the collapsed sidebar */
+  width: calc(100% - 60px); /* Adjust width so it doesn't overlap */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 135, 166, 0.8);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(63, 135, 166, 1);
+}
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    position: relative; /* Sidebar stacks on top */
+  }
+
+  .sidebar.collapsed {
+    width: 60px; /* Collapsed state on small screens */
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-content.centered {
+    margin-left: 0;
+    width: 100%; /* Full width on small screens */
+  }
+  
+}
+
+
+@media (max-width: 576px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

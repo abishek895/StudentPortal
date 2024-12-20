@@ -1,0 +1,25 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.header{
+  text-align: center;
+}
+
+.button-container .request-leave-button {
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Reduced margin for buttons */
+}
+
+.data-grid {
+  max-height: 400px; /* Adjust this value as needed */
+  overflow: auto; /* Allow scrolling if content exceeds height */
+}
+
